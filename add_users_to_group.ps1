@@ -9,6 +9,6 @@ $accountsToModify = 8;                # Set the number of accounts to modify
 $count = 1; 
 while ($count -le $accountsToModify) { 
   $username = "$baseusername$count"; 
-  Add-LocalGroupMember -Group $group $username; 
+  Add-LocalGroupMember -Group $group $username;     # Duplicate this line for each group to add new members to; replace "$group" with the group name in quotes.
   $count = $count + 1;
 }
